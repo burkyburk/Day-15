@@ -29,29 +29,68 @@ function onReady() {
 
 			$('#results').append(rowTemplate(data.Search[i]));
 
-			$('.created').on('click', addToWatchList);
+			$('.created').on('click', addtoWatchList);
+				
+				function addtoWatchList() {
+					
+					$(this).appendTo($('#watchlist'));
+					console.log('you click me');
+					
 
+					
 
-			function addToWatchList() {
-				$(this).appendTo($('#watchlist'));
-				console.log('you click me');
-			}
+					$( ".created" ).click(function() {
+  					$( this ).toggleClass( ".created2" );
+					});	
 
-			$('#watchlist').on('click', addToWatchedList);
+					$('.created2').on('click', addtoWatchedList);
 
-
-			function addToWatchedList() {
-				$(this).appendTo($('#watched'));
-				console.log('you clicked me');
-			}
-						 
-		}	
-			
+						function addtoWatchedList() {
+						
+						$(this).appendTo($('#watched'));		
+						console.log('you clicked me');
+				}	
 
 		
+
+
+
+				
+
+			}
+
+					
+				
+			
+
+
+
+			
+
+			}
+
+
+				
+
+
+
+
+
+
+				
+						 
+		}	
+
+
+
+			
+
 		
 
 	}
 
-}
+
+
+
+
 		
