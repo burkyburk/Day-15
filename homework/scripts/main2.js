@@ -39,11 +39,10 @@ function onReady() {
 
 					
 
-					$( ".created" ).click(function() {
-  					$( this ).toggleClass( ".created2" );
-					});	
+						
 
-					$('.created2').on('click', addtoWatchedList);
+					$(this).on('click', addtoWatchedList);
+					$(this).off('click', addtoWatchList);
 
 						function addtoWatchedList() {
 						
